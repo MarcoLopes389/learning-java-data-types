@@ -90,8 +90,8 @@ public class Main {
         System.out.print(stack);
         System.out.println(queue);
 
-        while (!queue.isEmpty()) {
-            var result = queue.poll();
-        }
+        System.out.println("Alguns métodos para trabalhar com String:");
+        System.out.printf("isEmpty: %s", stringValue.isEmpty());
+        System.out.printf("toCharArray: %s", Arrays.toString(stringValue.toCharArray()));
     }
 }
