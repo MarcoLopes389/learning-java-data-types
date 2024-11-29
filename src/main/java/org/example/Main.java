@@ -1,6 +1,7 @@
 package org.example;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -113,5 +114,51 @@ public class Main {
         System.out.printf("getBytes: %s\n", stringValue.getBytes());
         System.out.printf("matches: %s\n", stringValue.matches("Um regex aqui"));
         System.out.printf("repeat: %s\n", stringValue.repeat(3));
+
+        System.out.println("Alguns métodos para trabalhar com Arrays:");
+        System.out.printf("add: %s\n", arrayList.add("Item"));
+        System.out.printf("get: %s\n", arrayList.get(0));
+        System.out.printf("remove: %s\n", arrayList.remove("Item"));
+        System.out.printf("size: %s\n", arrayList.size());
+        System.out.printf("contains: %s\n", arrayList.contains("Item"));
+        System.out.printf("indexOf: %s\n", arrayList.indexOf("Item"));
+        System.out.printf("lastIndexOf: %s\n", arrayList.lastIndexOf("Item"));
+        System.out.printf("addAll: %s\n", arrayList.addAll(Arrays.asList("UM", "DOIS")));
+        System.out.printf("subList: %s\n", arrayList.subList(0, 1));
+        System.out.printf("removeAll: %s\n", arrayList.removeAll(Arrays.asList("UM", "DOIS")));
+        System.out.printf("retainAll: %s\n", arrayList.retainAll(Arrays.asList("UM", "DOIS")));
+        arrayList.sort((a, b) -> { return -1 * a.compareTo(b);});
+        arrayList.clear();
+
+        System.out.println("Alguns métodos para trabalhar com Sets:");
+        System.out.printf("add: %s\n", hashSet.add(1));
+        System.out.printf("contains: %s\n", hashSet.contains(1));
+        System.out.printf("remove: %s\n", hashSet.remove(1));
+        System.out.printf("size: %s\n", hashSet.size());
+        System.out.printf("isEmpty: %s\n", hashSet.isEmpty());
+        hashSet.clear();
+
+        System.out.println("Alguns métodos para trabalhar com Maps:");
+        System.out.printf("put: %s\n", hashMap.put("key", "value"));
+        System.out.printf("get: %s\n", hashMap.get("key"));
+        System.out.printf("remove: %s\n", hashMap.remove("key"));
+        System.out.printf("containsKey: %s\n", hashMap.containsKey("key"));
+        System.out.printf("containsValue: %s\n", hashMap.containsValue("value"));
+        System.out.printf("size: %s\n", hashMap.size());
+        System.out.printf("add: %s\n", hashMap.keySet());
+        System.out.printf("add: %s\n", hashMap.values());
+        System.out.printf("add: %s\n", hashMap.entrySet());
+
+        System.out.println("Alguns outros métodos para trabalhar com Streams:");
+        System.out.printf("filter: %s\n", arrayList.stream().filter((item) -> item.length() > 3).collect(Collectors.toList()));
+        System.out.printf("map: %s\n", arrayList.stream().map(String::toUpperCase).collect(Collectors.toList()));
+        System.out.printf("reduce: %s\n", arrayList.stream().reduce("", (prev, next) -> prev + next));
+        System.out.printf("sorted: %s\n", arrayList.stream().sorted());
+        System.out.printf("distinct: %s\n", arrayList.stream().distinct());
+        System.out.printf("limit: %s\n", arrayList.stream().limit(3));
+        System.out.printf("skip: %s\n", arrayList.stream().skip(2));
+        System.out.printf("allMatch: %s\n", arrayList.stream().allMatch((item) -> item.length() == 3));
+        System.out.printf("collect: %s\n", arrayList.stream().collect(Collectors.toSet()));
+        System.out.printf("findAny: %s\n", arrayList.stream().findAny());
     }
 }
