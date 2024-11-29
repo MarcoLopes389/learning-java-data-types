@@ -91,7 +91,27 @@ public class Main {
         System.out.println(queue);
 
         System.out.println("Alguns métodos para trabalhar com String:");
-        System.out.printf("isEmpty: %s", stringValue.isEmpty());
-        System.out.printf("toCharArray: %s", Arrays.toString(stringValue.toCharArray()));
+        System.out.printf("replace: %s\n", stringValue.replace("e", ""));
+        System.out.printf("isEmpty: %s\n", stringValue.isEmpty());
+        System.out.printf("equals: %s\n", stringValue.equals("Um teste qualquer"));
+        System.out.printf("toCharArray: %s\n", Arrays.toString(stringValue.toCharArray()));
+        System.out.printf("trim: %s\n", stringValue.trim());
+        System.out.printf("toLowerCase: %s\n", stringValue.toLowerCase());
+        System.out.printf("toUpperCase: %s\n", stringValue.toUpperCase());
+        System.out.printf("contains: %s\n", stringValue.contains("e"));
+        System.out.printf("substring: %s\n", stringValue.substring(3, 15));
+        System.out.printf("length: %s\n", stringValue.length());
+        System.out.printf("concat: %s\n", stringValue.concat("Nova String"));
+        System.out.printf("split: %s\n", Arrays.toString(stringValue.split("e")));
+        System.out.printf("strip: %s\n", stringValue.strip());
+        System.out.printf("indent: %s\n", stringValue.indent(5));
+        System.out.printf("translateEscapes: %s\n", stringValue.translateEscapes());
+        System.out.printf("intern: %s\n", stringValue.intern());
+        System.out.printf("isBlank: %s\n", stringValue.isBlank());
+        System.out.printf("lines: %s\n", stringValue.lines());
+        System.out.printf("codePoints: %s\n", stringValue.codePoints());
+        System.out.printf("getBytes: %s\n", stringValue.getBytes());
+        System.out.printf("matches: %s\n", stringValue.matches("Um regex aqui"));
+        System.out.printf("repeat: %s\n", stringValue.repeat(3));
     }
 }
